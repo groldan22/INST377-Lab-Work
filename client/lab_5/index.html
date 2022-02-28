@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel='stylesheet' href='styles.css'/>
+  <title>Lab 5</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="column is-centered">
+      <div class="box">
+        <h1 class='title'>Gerson Roldan's Lab 5</h1>
+      </div>
+    </div>
+
+    <div class='content-fill'>
+      <div class='columns'>
+        <div class='column is-narrow'>
+          <div class='block'>
+          <form method='get' class='food-form'>
+            <div class='form-row'>
+              <label for='first-name'>
+            <!-- text box 1 -->
+                <div class="form-style">First Name</div>
+              </label>
+              <input id='first-name' name='first-name' type='text'/>
+            </div>
+            <!-- text box 2 -->
+            <div class="form-row">
+              <label for="food-preference">
+                <div class="form-style">Food Preference</div>
+              </label>
+              <input id="food-preference" name="food-preference" type="text"/>
+            </div>
+                        <!-- radio button -->
+            <fieldset class='legacy-form-row'>
+              <legend>
+                <div class="form-style">Veggie or Vegan?</div>
+              </legend>
+              <input id='option-1' name='food-type' type='radio' value='yes'/>
+              <label for='option-1' class='radio-label'>Yes</label>
+              <input id="option-2" name="food-type" type="radio" value="no" />
+              <label for="option-2" class='radio-label'>No</label>
+            </fieldset>
+                        <!-- Submit button -->
+            <div class='form-row'>
+              <button tyep='submit'>Submit</button>
+            </div>
+          </form>
+          </div>  
+        </div>
+        <div class="column is-half">  
+          <div class="form-row blank-content">
+            <p>This is going to be something in two weeks.</p>
+          </div>           
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js" charset="utf-8"></script>
+</body>
+</html>
