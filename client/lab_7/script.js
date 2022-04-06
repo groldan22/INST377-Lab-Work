@@ -46,12 +46,9 @@ async function mainEvent() { // the async keyword means we can make API requests
 
   const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
-  // console.log(arrayFromJson);
 
-  // This if statement is to prevent a race condition on data load
   if (arrayFromJson.length > 0) {
     submit.style.display = 'block';
-    // this allows us to change the var to anything we want, but pre-sets it as an array for reasoning
     let currentArray = [];
 
     resto.addEventListener('input', (event) => {
@@ -71,7 +68,6 @@ async function mainEvent() { // the async keyword means we can make API requests
       if (!currentArray.length) { return; }
       console.log(event.target.value);
       console.log(currentArray);
-      // console.log(zipcode.value);
       const zip = currentArray.filter((item) => item.zip.includes(event.target.value));
       createHtmlList(zip);
     });
